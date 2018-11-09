@@ -5,3 +5,7 @@
     background-color: lightskyblue;
     border-radius: 5%;
 }
+
+.inputsContainer.isUsinghooks {
+    background-color:lightcoral;
+}

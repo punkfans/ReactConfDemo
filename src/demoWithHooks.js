@@ -2,11 +2,11 @@ import React from 'react';
 import { TextField } from '@material-ui/core';
 import './demo.css';
 
-export default class Demo extends React.Component {
+export default class DemoWithHooks extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            firstName: 'Yuyang',
+            firstName: 'Hooks',
             lastName: 'Wang',
             windowWidth: window.innerWidth,
         };
@@ -49,7 +49,7 @@ export default class Demo extends React.Component {
 
     render() {
         return (
-            <div className="inputsContainer">
+            <div className="inputsContainer isUsinghooks">
                 <TextField
                     id="first-name"
                     label="FirstName"
