@@ -1,4 +1,6 @@
 import React from 'react';
+import { TextField } from '@material-ui/core';
+import './demo.css';
 
 export default class demo extends React.Component {
     constructor(props) {
@@ -26,15 +28,21 @@ export default class demo extends React.Component {
 
     render() {
         return (
-            <div>
-                <div>
-                    First Name
-                    <input value={this.state.firstName} onChange={this.handleFirstNameChange}/>
-                </div>
-                <div>
-                    Last Name
-                    <input value={this.state.lastName} onChange={this.handleLastNameChange}/>
-                </div>
+            <div className="demoContainer">
+                <TextField
+                    id="firstd-name"
+                    label="FirstName"
+                    value={this.state.firstName}
+                    onChange={this.handleFirstNameChange}
+                    margin="normal"
+                />
+                <TextField
+                    id="last-name"
+                    label="LastName"
+                    value={this.state.lastName}
+                    onChange={this.handleLastNameChange}
+                    margin="normal"
+                />
             </div>
         );
     }
