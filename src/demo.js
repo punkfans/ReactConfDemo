@@ -8,6 +8,7 @@ export default class demo extends React.Component {
         this.state = {
             firstName: 'Yuyang',
             lastName: 'Wang',
+            windowWidth: window.innerWidth,
         };
 
         this.handleFirstNameChange = this.handleFirstNameChange.bind(this);
@@ -16,10 +17,19 @@ export default class demo extends React.Component {
 
     componentDidMount() {
         document.title = `${this.state.firstName}'s Demo`;
+        window.addEventListener('resize', () => {
+            this.setState({
+                windowWidth: window.innerWidth,
+            });
+        });
     }
 
     componentDidUpdate() {
         document.title = `${this.state.firstName}'s Demo`;
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize');
     }
 
     handleFirstNameChange(e) {
@@ -49,6 +59,12 @@ export default class demo extends React.Component {
                     label="LastName"
                     value={this.state.lastName}
                     onChange={this.handleLastNameChange}
+                    margin="normal"
+                />
+                <TextField
+                    id="standard-helperText"
+                    label="WindowWidth"
+                    value={this.state.windowWidth}
                     margin="normal"
                 />
             </div>
