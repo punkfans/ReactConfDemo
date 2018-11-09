@@ -48,7 +48,7 @@ export default class demo extends React.Component {
         return (
             <div className="demoContainer">
                 <TextField
-                    id="firstd-name"
+                    id="first-name"
                     label="FirstName"
                     value={this.state.firstName}
                     onChange={this.handleFirstNameChange}
@@ -62,7 +62,7 @@ export default class demo extends React.Component {
                     margin="normal"
                 />
                 <TextField
-                    id="standard-helperText"
+                    id="windowWidth"
                     label="WindowWidth"
                     value={this.state.windowWidth}
                     margin="normal"
