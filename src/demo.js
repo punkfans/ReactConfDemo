@@ -14,6 +14,14 @@ export default class demo extends React.Component {
         this.handleLastNameChange = this.handleLastNameChange.bind(this);
     }
 
+    componentDidMount() {
+        document.title = `${this.state.firstName}'s Demo`;
+    }
+
+    componentDidUpdate() {
+        document.title = `${this.state.firstName}'s Demo`;
+    }
+
     handleFirstNameChange(e) {
         this.setState({
             firstName: e.target.value
