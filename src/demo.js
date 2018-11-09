@@ -46,7 +46,7 @@ export default class demo extends React.Component {
 
     render() {
         return (
-            <div className="demoContainer">
+            <div className="inputsContainer">
                 <TextField
                     id="first-name"
                     label="FirstName"
