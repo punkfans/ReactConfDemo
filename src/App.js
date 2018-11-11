@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import Hooks from './Hooks/hooks';
 import { AppBar, Tabs, Tab } from '@material-ui/core';
+import LazySuspense from './LazySuspense/lazySuspense';
 
 function App() {
 
@@ -15,7 +16,7 @@ function App() {
       case 0:
         return <Hooks />;
       case 1:
-        return 'haha';
+        return <LazySuspense />;
       case 2:
         return 'hoho';
     }
