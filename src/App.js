@@ -4,6 +4,7 @@ import { CircularProgress } from '@material-ui/core';
 import Hooks from './Hooks/hooks';
 import { AppBar, Tabs, Tab } from '@material-ui/core';
 import LazySuspense from './LazySuspense/lazySuspense';
+import BackgroundLoading from './BackgroundLoading/backgroundLoading';
 
 function App() {
 
@@ -19,7 +20,7 @@ function App() {
       case 1:
         return <LazySuspense />;
       case 2:
-        return 'hoho';
+        return <BackgroundLoading />;
     }
   };
 
@@ -29,7 +30,7 @@ function App() {
         <Tabs value={tabVallue} onChange={changeTab}>
           <Tab label="Hooks" />
           <Tab label="Lazy Suspense" />
-          <Tab label="Item Three" />
+          <Tab label="Background Loading" />
         </Tabs>
       </AppBar>
       <div className="bodyContainer">
