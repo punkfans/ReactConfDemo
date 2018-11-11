@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import { Switch } from '@material-ui/core';
-import DemoWithHooks from './demoWithHooks';
-import Demo from './demo';
+import HooksFunctionComponent from './hooksFunctionComponent';
+import HooksClassComponent from './hooksClassComponent';
 
 export default function Hook() {
     const [isUsingHook, setIsUsingHook] = useState(false);
     const renderDemo = () => {
         if (isUsingHook) {
-            return <DemoWithHooks />
+            return <HooksFunctionComponent />
         }
 
-        return <Demo />
+        return <HooksClassComponent />
     };
 
     const swtichHooksDemo = () => {

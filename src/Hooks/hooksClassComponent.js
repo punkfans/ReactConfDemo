@@ -2,7 +2,7 @@ import React from 'react';
 import { TextField } from '@material-ui/core';
 import './demo.css';
 
-export default class Demo extends React.Component {
+export default class HooksClassComponent extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -52,21 +52,21 @@ export default class Demo extends React.Component {
             <div className="inputsContainer">
                 <TextField
                     id="first-name"
-                    label="FirstName"
+                    label="First Name"
                     value={this.state.firstName}
                     onChange={this.handleFirstNameChange}
                     margin="normal"
                 />
                 <TextField
                     id="last-name"
-                    label="LastName"
+                    label="Last Name"
                     value={this.state.lastName}
                     onChange={this.handleLastNameChange}
                     margin="normal"
                 />
                 <TextField
-                    id="windowWidth"
-                    label="WindowWidth"
+                    id="window-width"
+                    label="Window Width"
                     value={this.state.windowWidth}
                     margin="normal"
                 />

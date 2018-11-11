@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { TextField } from '@material-ui/core';
 import './demo.css';
 
-export default function DemoWithHooks(props) {
+export default function HooksFunctionComponent() {
     const [firstName, handleFirstNameChange] = useName('Haha');
     const [lastName, handleLastNameChange] = useName('Wang');
 
