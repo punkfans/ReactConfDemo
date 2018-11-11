@@ -20,7 +20,7 @@ export default function Hooks() {
     };
 
     return (
-        <div>
+        <div className="inputFieldContainer">
             {renderDemo()}
             <Switch
                 checked={isUsingHook}

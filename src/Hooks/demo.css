@@ -8,3 +8,7 @@
 .inputsContainer.isUsinghooks {
     background-color:lightcoral;
 }
+
+.inputFieldContainer {
+    width: 100%;
+}
