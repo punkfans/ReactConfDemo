@@ -13,6 +13,8 @@ export default function Hook() {
         return <HooksClassComponent />
     };
 
+    const hooksIndecator = isUsingHook ? 'Hooks on' : 'Hooks off';
+
     const swtichHooksDemo = () => {
         setIsUsingHook(!isUsingHook);
     };
@@ -26,6 +28,7 @@ export default function Hook() {
                 value="checkedB"
                 color="primary"
             />
+            <span>{ hooksIndecator }</span>
         </div>
     );
 }
