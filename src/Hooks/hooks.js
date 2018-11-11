@@ -3,7 +3,7 @@ import { Switch } from '@material-ui/core';
 import HooksFunctionComponent from './hooksFunctionComponent';
 import HooksClassComponent from './hooksClassComponent';
 
-export default function Hook() {
+export default function Hooks() {
     const [isUsingHook, setIsUsingHook] = useState(false);
     const renderDemo = () => {
         if (isUsingHook) {

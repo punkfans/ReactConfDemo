@@ -1,7 +1,7 @@
 .appContainer {
   padding-top: 200px;
-  display: flex;
-  justify-content: center;
+  width: 35%;
+  margin: auto;
 }
 
 .App-link {
