@@ -12,7 +12,7 @@ const SomgBigComponent = lazy(() => {
 
 export default function BackgroundLoading() {
     const [toggleState, setToggleState] = useState(false);
-    const [inputValue, handleInputValue] = useName('Some Text');
+    const [residentialAddress, handleResidentialAddress] = useName('');
 
     const renderBody = () => {
         if (!toggleState) {
@@ -29,19 +29,24 @@ export default function BackgroundLoading() {
     return (
         <div className="container">
             <TextField
-                id="inputField"
-                label="Random Text Field"
-                value={inputValue}
-                onChange={handleInputValue}
+                id="residentialAddress"
+                label="Residential Address"
+                value={residentialAddress}
+                onChange={handleResidentialAddress}
                 margin="normal"
             />
-            <Switch
-                checked={toggleState}
-                onChange={() => setToggleState(!toggleState)}
-                value="checkedB"
-                color="primary"
-            />
-            { renderBody() }
+            <div>
+                <Switch
+                    checked={toggleState}
+                    onChange={() => setToggleState(!toggleState)}
+                    value="checkedB"
+                    color="primary"
+                />
+                <span>
+                    My mailing addrss is different from my residential address
+                </span>
+            </div>
+            {renderBody()}
         </div>
     );
 }
