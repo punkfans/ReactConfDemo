@@ -1,6 +1,6 @@
 import React, { lazy, Suspense, useState } from 'react';
 import { Switch, CircularProgress } from '@material-ui/core';
-import { useName } from '../Hooks/hooksFunctionComponent';
+import { useName } from '../util/util';
 import { TextField } from '@material-ui/core';
 import './backgroundLoading.css';
 
