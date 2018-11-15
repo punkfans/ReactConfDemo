@@ -1,9 +1,9 @@
 import React from 'react';
 import { TextField } from '@material-ui/core';
-import { useName } from '../util/util';
+import { useName as useMailingAddress } from '../util/util';
 
 export default function mailingAddressComponent() {
-    const [mailingAddress, handleMailingAddressChange] = useName('');
+    const [mailingAddress, handleMailingAddressChange] = useMailingAddress('');
 
     return (
         <TextField

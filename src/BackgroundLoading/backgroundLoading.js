@@ -1,6 +1,6 @@
 import React, { lazy, Suspense, useState } from 'react';
 import { Switch, CircularProgress } from '@material-ui/core';
-import { useName } from '../util/util';
+import { useName as useResidentialAddress } from '../util/util';
 import { TextField } from '@material-ui/core';
 import './backgroundLoading.css';
 
@@ -12,7 +12,7 @@ const MailingAddressComponent = lazy(() => {
 
 export default function BackgroundLoading() {
     const [toggleState, setToggleState] = useState(false);
-    const [residentialAddress, handleResidentialAddress] = useName('');
+    const [residentialAddress, handleResidentialAddress] = useResidentialAddress('');
 
     const renderMailingAddress = () => {
         if (!toggleState) {
@@ -46,7 +46,9 @@ export default function BackgroundLoading() {
                     My mailing addrss is different from my residential address
                 </span>
             </div>
-            {renderMailingAddress()}
+            <div className="mailingAddressContainer">
+                {renderMailingAddress()}
+            </div>
         </div>
     );
 }

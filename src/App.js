@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './App.css';
-import { CircularProgress } from '@material-ui/core';
 import Hooks from './Hooks/hooks';
 import { AppBar, Tabs, Tab } from '@material-ui/core';
 import LazySuspense from './LazySuspense/lazySuspense';
@@ -21,6 +20,8 @@ function App() {
         return <LazySuspense />;
       case 2:
         return <BackgroundLoading />;
+      default:
+        return null;
     }
   };
 
