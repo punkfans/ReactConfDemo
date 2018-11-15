@@ -14,7 +14,7 @@ export default function BackgroundLoading() {
     const [toggleState, setToggleState] = useState(false);
     const [residentialAddress, handleResidentialAddress] = useName('');
 
-    const renderBody = () => {
+    const renderMailingAddress = () => {
         if (!toggleState) {
             return null;
         } else {
@@ -46,7 +46,7 @@ export default function BackgroundLoading() {
                     My mailing addrss is different from my residential address
                 </span>
             </div>
-            {renderBody()}
+            {renderMailingAddress()}
         </div>
     );
 }
