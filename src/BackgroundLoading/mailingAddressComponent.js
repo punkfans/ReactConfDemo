@@ -2,7 +2,7 @@ import React from 'react';
 import { TextField } from '@material-ui/core';
 import { useName } from '../util/util';
 
-export default function SomgBigComponent() {
+export default function mailingAddressComponent() {
     const [mailingAddress, handleMailingAddressChange] = useName('');
 
     return (

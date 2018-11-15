@@ -4,10 +4,10 @@ import { useName } from '../util/util';
 import { TextField } from '@material-ui/core';
 import './backgroundLoading.css';
 
-const SomgBigComponent = lazy(() => {
+const MailingAddressComponent = lazy(() => {
     return new Promise(resolve => {
-        setTimeout(resolve, 5000);
-    }).then(() => import('./somgBigComponent'));
+        setTimeout(resolve, 3000);
+    }).then(() => import('./mailingAddressComponent'));
 });
 
 export default function BackgroundLoading() {
@@ -20,7 +20,7 @@ export default function BackgroundLoading() {
         } else {
             return (
                 <Suspense fallback={<CircularProgress />}>
-                    <SomgBigComponent />
+                    <MailingAddressComponent />
                 </Suspense>
             );
         }
