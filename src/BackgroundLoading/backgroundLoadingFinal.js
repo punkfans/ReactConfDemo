@@ -1,14 +1,9 @@
-import React, { lazy, Suspense, useState } from 'react';
-import { Switch, CircularProgress } from '@material-ui/core';
+import React, { useState } from 'react';
+import { Switch } from '@material-ui/core';
 import { useName as useResidentialAddress } from '../util/util';
 import { TextField } from '@material-ui/core';
 import './backgroundLoading.css';
-
-const MailingAddressComponent = lazy(() => {
-    return new Promise(resolve => {
-        setTimeout(resolve, 3000);
-    }).then(() => import('./mailingAddressComponent'));
-});
+import MailingAddressComponent from './mailingAddressComponent';
 
 export default function BackgroundLoading() {
     const [toggleState, setToggleState] = useState(false);
@@ -35,9 +30,7 @@ export default function BackgroundLoading() {
                 </span>
             </div>
             <div className="mailingAddressContainer" hidden={!toggleState}>
-                <Suspense fallback={<CircularProgress />}>
-                    <MailingAddressComponent />
-                </Suspense>
+                <MailingAddressComponent />
             </div>
         </div>
     );
