@@ -6,9 +6,15 @@
 }
 
 .mailingAddressContainer {
+    height: 72px;
     width: 100%;
 }
 
 .mailingAddressContainer div {
     width: 100%;
+    margin-top: -10px;
+}
+
+.mailingAddressContainer div.spinnerContainer {
+    margin-top: 5px;
 }

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { TextField, CircularProgress } from '@material-ui/core';
 import { useName as useMailingAddress } from '../util/util';
+import './backgroundLoading.css';
 
 export default function mailingAddressComponent() {
     const [mailingAddress, handleMailingAddressChange] = useMailingAddress('');
@@ -22,7 +23,11 @@ export default function mailingAddressComponent() {
     });
     
     if(!data) {
-        return <CircularProgress />
+        return (
+            <div className="spinnerContainer">
+                <CircularProgress />
+            </div>
+        );
     }
 
     return (
