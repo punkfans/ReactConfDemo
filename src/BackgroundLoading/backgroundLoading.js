@@ -38,7 +38,9 @@ export default function BackgroundLoading() {
                 </span>
             </div>
             <div className="mailingAddressContainer">
-                {renderMailingAddress()}
+                <div>
+                    {renderMailingAddress()}
+                </div>
             </div>
         </div>
     );
