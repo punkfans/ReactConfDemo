@@ -13,7 +13,7 @@ export default function Hooks() {
         return <HooksClassComponent />
     };
 
-    const hooksIndecator = isUsingHook ? 'Hooks on' : 'Hooks off';
+    const hooksIndecator = isUsingHook ? 'Hooks on (Function)' : 'Hooks off (Class)';
 
     const swtichHooksDemo = () => {
         setIsUsingHook(!isUsingHook);
