@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Switch } from '@material-ui/core';
 import { useName as useResidentialAddress } from '../util/util';
 import { TextField } from '@material-ui/core';
-import './backgroundLoading.css';
+import './offScreenRender.css';
 import MailingAddressComponent from './mailingAddressComponent';
 
 export default function OffScreenRender() {

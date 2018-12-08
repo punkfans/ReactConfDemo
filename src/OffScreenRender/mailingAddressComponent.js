@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { TextField, CircularProgress } from '@material-ui/core';
 import { useName as useMailingAddress } from '../util/util';
-import './backgroundLoading.css';
+import './offScreenRender.css';
 
 export default function mailingAddressComponent() {
     const [mailingAddress, handleMailingAddressChange] = useMailingAddress('');
