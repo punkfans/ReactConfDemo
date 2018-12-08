@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import './App.css';
 import Hooks from './Hooks/hooks';
 import { AppBar, Tabs, Tab } from '@material-ui/core';
-import LazySuspense from './LazySuspense/lazySuspense';
-import BackgroundLoading from './BackgroundLoading/backgroundLoading';
+import HugeComponent from './HugeComponent/hugeComponent';
+import OffScreenRender from './OffScreenRender/offScreenRender';
 
 function App() {
 
@@ -17,9 +17,9 @@ function App() {
       case 0:
         return <Hooks />;
       case 1:
-        return <LazySuspense />;
+        return <HugeComponent />;
       case 2:
-        return <BackgroundLoading />;
+        return <OffScreenRender />;
       default:
         return null;
     }
@@ -30,8 +30,8 @@ function App() {
       <AppBar position="static">
         <Tabs value={tabVallue} onChange={changeTab}>
           <Tab label="Hooks" />
-          <Tab label="Lazy Suspense" />
-          <Tab label="Background Loading" />
+          <Tab label="Huge Component" />
+          <Tab label="Off Screen Render" />
         </Tabs>
       </AppBar>
       <div className="bodyContainer">

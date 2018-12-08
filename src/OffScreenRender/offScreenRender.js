@@ -5,9 +5,17 @@ import { TextField } from '@material-ui/core';
 import './backgroundLoading.css';
 import MailingAddressComponent from './mailingAddressComponent';
 
-export default function BackgroundLoading() {
+export default function OffScreenRender() {
     const [toggleState, setToggleState] = useState(false);
     const [residentialAddress, handleResidentialAddress] = useResidentialAddress('');
+
+    const renderMailingAddress = () => {
+        if (!toggleState) {
+            return null;
+        } else {
+            return <MailingAddressComponent />;
+        }
+    }
 
     return (
         <div className="container">
@@ -22,15 +30,17 @@ export default function BackgroundLoading() {
                 <Switch
                     checked={toggleState}
                     onChange={() => setToggleState(!toggleState)}
-                    value="checkedB"
+                    value="checked"
                     color="primary"
                 />
                 <span>
                     My mailing addrss is different from my residential address
                 </span>
             </div>
-            <div className="mailingAddressContainer" hidden={!toggleState}>
-                <MailingAddressComponent />
+            <div className="mailingAddressContainer">
+                <div>
+                    {renderMailingAddress()}
+                </div>
             </div>
         </div>
     );
