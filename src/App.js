@@ -29,9 +29,7 @@ function App() {
     <div className="appContainer">
       <AppBar position="static">
         <Tabs value={tabVallue} onChange={changeTab}>
-          <Tab label="Hooks" />
-          <Tab label="Huge Component" />
-          <Tab label="Off Screen Render" />
+          <Tab label="React Hooks" />
         </Tabs>
       </AppBar>
       <div className="bodyContainer">
