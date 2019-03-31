@@ -4,7 +4,7 @@ import './demo.css';
 
 export default function HooksFunctionComponent() {
     return (
-        <div className="inputsContainer isUsinghooks">
+        <div className="inputsContainer">
             <TextField
                 id="first-name"
                 label="First Name"
